@@ -61,6 +61,7 @@ namespace NETCore.TestFirstDataMicroIndicatorService
                     rawHttpResponse = client.PostAsync(url, content).Result;  // configure the Client to not capture current context, returning on a Thread Pool thread, avoiding deadlocks
                     rawHttpResponse.EnsureSuccessStatusCode();      // EnsureSuccess is preferred, will generate exception on non-success
 
+
                     sw.Stop();
 
                     if (rawHttpResponse.StatusCode == System.Net.HttpStatusCode.OK)
