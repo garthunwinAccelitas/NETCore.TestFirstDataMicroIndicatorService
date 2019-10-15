@@ -58,6 +58,8 @@ namespace NETCore.TestFirstDataMicroIndicatorService
 
                     System.Net.Http.HttpResponseMessage rawHttpResponse = null;
 
+                    Console.WriteLine("Sending....");           // gratuitous change #2 to test GitHub source code control
+
                     rawHttpResponse = client.PostAsync(url, content).Result;  // configure the Client to not capture current context, returning on a Thread Pool thread, avoiding deadlocks
                     rawHttpResponse.EnsureSuccessStatusCode();      // EnsureSuccess is preferred, will generate exception on non-success
 
