@@ -61,6 +61,9 @@ namespace NETCore.TestFirstDataMicroIndicatorService
                     Console.WriteLine("Sending....");           // gratuitous change #2 to test GitHub source code control
                     Console.WriteLine("Still Sending....");     // gratuitous change #3 to test GitHub source code control
 
+                    Console.WriteLine("Branch1 - Still sending...."); // code change on Branch1
+                    Console.WriteLine("Branch1 - code change 2");    // 2nd code change on Branch1
+
                     rawHttpResponse = client.PostAsync(url, content).Result;  // configure the Client to not capture current context, returning on a Thread Pool thread, avoiding deadlocks
                     rawHttpResponse.EnsureSuccessStatusCode();      // EnsureSuccess is preferred, will generate exception on non-success
 
